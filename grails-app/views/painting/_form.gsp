@@ -34,14 +34,8 @@
             </div>
         </td>
         <td>
-            <g:if test="${actionName != 'show'}">
-                <label class="form-label col-6" ><nobr>JPEG-Bilddatei</nobr></label>
-            </g:if>
         </td>
         <td>
-            <g:if test="${actionName != 'show'}">
-                <input type="file" id="jpegFile" name="jpegFile" class="btn btn-outline-secondary col-6"/>
-            </g:if>
         </td>
     </tr>
 </table>

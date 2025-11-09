@@ -56,6 +56,12 @@ class BootStrap {
                 parm.save(flush: true, failOnError: true)
             }
 
+            parm = SyParameter.findByKeyValue("TempUploadOrdner")
+            if (!parm) {
+                parm = new SyParameter(keyValue: 'TempUploadOrdner', value: '/var/ArtDB/TempUpload')
+                parm.save(flush: true, failOnError: true)
+            }
+
         }
     }
     def destroy = {
