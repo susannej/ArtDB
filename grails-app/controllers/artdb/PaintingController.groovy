@@ -90,6 +90,13 @@ class PaintingController {
             String uploadPath = parameter.value
             println "Upload- SpeicherplatzBilder = " + uploadPath
 
+            // Altes Bild löschen, wenn vorhanden
+            if (painting.paintingImage != null && painting.paintingImage.length() > 0) {
+                File oldFile = new File(uploadPath + "/" + painting.paintingImage)
+                oldFile.delete()
+                println "Upload- oldFile: " + painting.paintingImage + " gelöscht!"
+            }
+
             // Create the upload-path if it doesn't exist
             def uploadPathFile = new File(uploadPath)
             if (!uploadPathFile.exists()) {
