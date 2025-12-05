@@ -9,6 +9,9 @@ $( function() {
     targets.bind( 'mouseenter', function() {
         target  = $( this );
         tip     = target.attr( 'src' );
+		max     = target.attr( 'max' );
+		if (!max || max == '')
+			max = '350px';
         tooltip = $( '<div id="vwtooltip"></div>' );
  
         if( !tip || tip == '' )
@@ -16,7 +19,7 @@ $( function() {
 
    		target.removeAttr( 'title' );
    		tooltip.css( 'opacity', 0 )
-   			.html("<img src='" + tip + "' style='max-width: 350px;max-height: 350px' />")
+   			.html("<img src='" + tip + "' style='max-width: " + max + ";max-height: " + max + "' />")
    			.appendTo( 'body' );
  
    		var init_tooltip = function() {

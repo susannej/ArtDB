@@ -13,7 +13,7 @@
             </div>
         </td>
         <td rowspan="2" style="width: 33%;">
-            <img src="${request.contextPath}/painting/image/${painting?.id}" class="vwtooltip me-3 border-radius-lg" style="max-width: 250px; max-height: 250px;" alt="user1">
+            <img src="${request.contextPath}/painting/image/${painting?.id}" class="vwtooltip me-3 border-radius-lg" style="max-width: 250px; max-height: 250px;" max="500px" alt="user1">
         </td>
         <td>
             <g:if test="${actionName != 'show'}">
