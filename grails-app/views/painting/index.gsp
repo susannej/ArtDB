@@ -106,7 +106,7 @@
                                                         <!--
                                                         <asset:image src="template_painting.jpeg" class="avatar avatar-m mx-3 border-radius-lg" />
                                                         -->
-                                                        <img src="${request.contextPath}/painting/image/${painting?.id}" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+                                                        <img src="${request.contextPath}/painting/image/${painting?.id}" class="avatar avatar-sm vwtooltip me-3 border-radius-lg" alt="user1">
                                                     </div>
                                                     <div class="d-flex flex-column justify-content-center">
                                                         <!--

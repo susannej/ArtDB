@@ -1,0 +1,50 @@
+.vwtooltip {
+	color: #ccc;
+}
+#vwtooltip
+{
+    /*text-align: center;*/
+    color: #fff;
+    border-radius: 6px;
+    background: /*#111*/ rgba(17, 17, 17, 0.85);
+    position: absolute;
+    z-index: 1000;
+    padding: 8px;
+    opacity: 0.5;
+}
+ 
+#vwtooltip:after /* triangle decoration */
+{
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #111;
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    margin-left: -10px;
+}
+ 
+#vwtooltip.top:after
+{
+    border-top-color: transparent;
+    border-bottom: 10px solid #111;
+    top: -20px;
+    bottom: auto;
+}
+ 
+#vwtooltip.left:after
+{
+    left: 10px;
+    margin: 0;
+}
+ 
+#vwtooltip.right:after
+{
+    right: 10px;
+    left: auto;
+    margin: 0;
+}
+

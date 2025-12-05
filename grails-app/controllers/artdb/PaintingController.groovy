@@ -158,7 +158,7 @@ class PaintingController {
         if (imagePath != null && painting?.paintingImage != null && painting?.paintingImage.size() > 0) {
             file = new File(imagePath + "/" + painting.paintingImage)
         } else {
-            file = new File(imagePath + "/default.jpg")
+            file = new File(imagePath + "/default.png")
         }
 
         if(!file.exists()) {

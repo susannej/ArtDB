@@ -35,6 +35,7 @@
   <asset:stylesheet id="pagestyle" src="material-dashboard.css" />
   <asset:stylesheet src="jquery-ui.min.css" />
   <asset:stylesheet src="artdb.css" />
+  <asset:stylesheet src="tooltip.css" />
 </head>
 
   <body class="g-sidenav-show  bg-gray-200 ${org.springframework.context.i18n.LocaleContextHolder.locale.language == 'fa' ? 'rtl' : ''}">
@@ -381,6 +382,7 @@
   <asset:javascript src="jquery-3.7.1.min.js" />
   <asset:javascript src="jquery-ui.min.js" />
   <asset:javascript src="fontawesome-all.min.js" />
+  <asset:javascript src="tooltip.js" />
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {
