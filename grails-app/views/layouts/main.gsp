@@ -28,7 +28,7 @@
   <asset:stylesheet src="nucleo-icons.css" />
   <asset:stylesheet src="nucleo-svg.css" />
   <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <asset:stylesheet src="fontawesome-all.min.css" />
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
@@ -380,6 +380,7 @@
   <asset:javascript src="plugins/smooth-scrollbar.min.js" />
   <asset:javascript src="jquery-3.7.1.min.js" />
   <asset:javascript src="jquery-ui.min.js" />
+  <asset:javascript src="fontawesome-all.min.js" />
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {

@@ -80,9 +80,7 @@
                                         <tr>
                                             <shiro:hasPermission permission="painting:edit">
                                                 <td class="align-middle text-center">
-                                                    <!--
-                                                   <a href="" class="text-center text-secondary font-weight-bold text-s"><i class="fa fa-edit"></i></a>
-                                                    -->
+                                                   <!-- <a href="" class="text-center text-secondary font-weight-bold text-s"><i class="fa fa-edit"></i></a> -->
                                                     <g:link action="edit" id="${painting.id}" class="text-center"><i class="fa fa-edit"></i></g:link>
                                                 </td>
                                             </shiro:hasPermission>
@@ -105,10 +103,10 @@
                                             <td onclick="window.document.location='${request.contextPath}/${controllerName}/show/${painting.id}'">
                                                 <div class="d-flex px-2 py-1">
                                                     <div>
-                                                        <asset:image src="template_painting.jpeg" class="avatar avatar-m mx-3 border-radius-lg" />
                                                         <!--
-                                                        <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+                                                        <asset:image src="template_painting.jpeg" class="avatar avatar-m mx-3 border-radius-lg" />
                                                         -->
+                                                        <img src="${request.contextPath}/painting/image/${painting?.id}" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
                                                     </div>
                                                     <div class="d-flex flex-column justify-content-center">
                                                         <!--

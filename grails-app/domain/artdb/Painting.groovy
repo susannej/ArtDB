@@ -6,6 +6,8 @@ class Painting {
 
     boolean acqCompl = false
 
+    String paintingImage
+
     // Deutsch
     String titleDe
     String descriptionDe
@@ -44,6 +46,7 @@ class Painting {
     }
 
     static constraints = {
+        paintingImage nullable: true
         titleDe nullable: true
         descriptionDe nullable: true
         titleEn nullable: true

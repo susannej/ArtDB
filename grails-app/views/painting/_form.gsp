@@ -13,16 +13,16 @@
             </div>
         </td>
         <td rowspan="2" style="width: 33%;">
-            <label>bla blub</label>
+            <img src="${request.contextPath}/painting/image/${painting?.id}" class="me-3 border-radius-lg" style="max-width: 250px; max-height: 250px;" alt="user1">
         </td>
         <td>
             <g:if test="${actionName != 'show'}">
-                <label class="form-label col-6" ><nobr>RAW-Bilddatei</nobr></label>
+                <label class="form-label col-6" ><nobr>Bilddatei</nobr></label>
             </g:if>
         </td>
         <td>
             <g:if test="${actionName != 'show'}">
-                <input type="file" id="rawFile" name="rawFile" class="btn btn-outline-secondary col-6"/>
+                <input type="file" id="paintingImageUp" name="paintingImageUp" class="btn btn-outline-secondary col-6"/>
             </g:if>
         </td>
     </tr>
