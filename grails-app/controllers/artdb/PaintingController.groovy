@@ -90,13 +90,6 @@ class PaintingController {
             String uploadPath = parameter.value
             println "Upload- SpeicherplatzBilder = " + uploadPath
 
-            // Altes Bild löschen, wenn vorhanden
-            if (painting.paintingImage != null && painting.paintingImage.length() > 0) {
-                File oldFile = new File(uploadPath + "/" + painting.paintingImage)
-                oldFile.delete()
-                println "Upload- oldFile: " + painting.paintingImage + " gelöscht!"
-            }
-
             // Create the upload-path if it doesn't exist
             def uploadPathFile = new File(uploadPath)
             if (!uploadPathFile.exists()) {
@@ -104,6 +97,14 @@ class PaintingController {
             }
             MultipartFile file = request.getFile('paintingImageUp')
             if (!file.empty) {
+
+                // Altes Bild löschen, wenn vorhanden
+                if (painting.paintingImage != null && painting.paintingImage.length() > 0) {
+                    File oldFile = new File(uploadPath + "/" + painting.paintingImage)
+                    oldFile.delete()
+                    println "Upload- oldFile: " + painting.paintingImage + " gelöscht!"
+                }
+
                 String name = file.originalFilename
                 println "Upload- originalFilename = " + name
 
@@ -135,6 +136,14 @@ class PaintingController {
         if (id == null) {
             notFound()
             return
+        }
+
+        // Altes Bild löschen, wenn vorhanden
+        Painting painting = Painting.get(id)
+        if (painting.paintingImage != null && painting.paintingImage.length() > 0) {
+            File oldFile = new File(uploadPath + "/" + painting.paintingImage)
+            oldFile.delete()
+            println "Upload- oldFile: " + painting.paintingImage + " gelöscht!"
         }
 
         paintingService.delete(id)
