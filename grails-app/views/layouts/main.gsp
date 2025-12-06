@@ -80,6 +80,11 @@
             <h6 class="px-2 mx-2 text-uppercase text-xs text-white font-weight-bolder opacity-8"><g:message code="administration.label" /></h6>
           </div>
           </li>
+          <li class="nav-item mt-3">
+            <div class="text-white text-center d-flex align-items-center justify-content-center">
+              <hr>
+            </div>
+          </li>
           <!-- Administration -->
           <shiro:hasPermission permission="place:index">
             <li class="nav-item">
