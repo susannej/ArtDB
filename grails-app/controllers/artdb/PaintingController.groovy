@@ -139,6 +139,7 @@ class PaintingController {
         }
 
         // Altes Bild löschen, wenn vorhanden
+        String uploadPath = parameter = SyParameter.findByKeyValue('SpeicherplatzBilder').value
         Painting painting = Painting.get(id)
         if (painting.paintingImage != null && painting.paintingImage.length() > 0) {
             File oldFile = new File(uploadPath + "/" + painting.paintingImage)
