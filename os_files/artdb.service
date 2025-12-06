@@ -13,35 +13,35 @@
 # systemctl status steward
 
 [Unit]
-Description=ArtDB WEB-Application
+Description=artdb WEB-Application
 After=network.target
 
 [Service]
 
 # Configuration
-Environment="JAVA_HOME=/usr/lib/jvm/jdk-11.0.16.1+1"
-# Environment="PATH=/usr/lib/jvm/jdk-11.0.16.1+1/bin:$PATH"
+Environment="JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64"
+# Environment="PATH=/usr/lib/jvm/java-17-openjdk-amd64/bin:$PATH"
 Environment="JAVA_OPTS=-Djava.awt.headless=true -Xms2048m"
 
 # Lifecycle
 Type=simple
-ExecStart=/usr/lib/jvm/jdk-11.0.16.1+1/bin/java -cp /var/ArtDB/webapp ${JAVA_OPTS} org.springframework.boot.loader.WarLauncher
+ExecStart=/usr/lib/jvm/java-17-openjdk-amd64/bin/java -cp /var/artdb/webapp ${JAVA_OPTS} org.springframework.boot.loader.WarLauncher
 SuccessExitStatus=143
 Restart=on-abort
 
 # Logging
 # SyslogIdentifier=steward
-StandardOutput=append:/var/log/steward/steward.log
-StandardError=append:/var/log/steward/steward.log
+StandardOutput=append:/var/log/artdb.log
+StandardError=append:/var/log/artdb.log
 
 # Security
 User=artdb
 Group=artdb
-WorkingDirectory=/var/ArtDB
+WorkingDirectory=/var/artdb
 #LogsDirectory=steward
 #LogsDirectoryMode=750
 ProtectSystem=false
-ReadWritePaths=/var/Verwaltung
+ReadWritePaths=/var/artdb/bilder
 
 [Install]
 WantedBy=multi-user.target
